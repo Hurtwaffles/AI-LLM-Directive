@@ -243,33 +243,45 @@
 
   function injectBackgroundContainers() {
     brandonLog("P5: Injecting background containers and initializing sketches.");
-    const sectionConfigs = [
-      { sectionClass: 'brandon-bg-load-wave',  bgClass: 'brandon-load-wave',       factory: createLoadWaveSketch,        label: 'load-wave' },
-      { sectionClass: 'brandon-bg-main-bg',    bgClass: 'brandon-main-background', factory: createHazeBackgroundSketch,   label: 'main-background' },
-      { sectionClass: 'brandon-bg-main-bg2',   bgClass: 'brandon-main-background2',factory: createWhiteHazeBackgroundSketch, label: 'main-background2' }
-    ];
-    sectionConfigs.forEach(config => {
-      document.querySelectorAll(`smp-section.${config.sectionClass}`).forEach(section => {
-        let backgroundDiv = section.querySelector(`div.${config.bgClass}`);
-        if (!backgroundDiv) {
-          backgroundDiv = document.createElement('div');
-          backgroundDiv.className = config.bgClass;
-          if (window.getComputedStyle(section).position === 'static') {
-            section.style.position = 'relative';
-          }
-          const contentWrapper = section.querySelector('.smp-content-wrapper');
-          if (contentWrapper) {
-            if (window.getComputedStyle(contentWrapper).position === 'static') {
-              contentWrapper.style.position = 'relative';
-            }
-            contentWrapper.style.zIndex = '1';
-            section.insertBefore(backgroundDiv, contentWrapper);
-          } else {
-            section.prepend(backgroundDiv);
-          }
+
+    /*
+     * Editors can use a single class on each section (e.g. "brandon-bg-section")
+     * and specify which sketch to load via the data-brandon-bg attribute:
+     *   data-brandon-bg="load-wave" -> createLoadWaveSketch
+     *   data-brandon-bg="main-bg"   -> createHazeBackgroundSketch
+     *   data-brandon-bg="main-bg2"  -> createWhiteHazeBackgroundSketch
+     * This function reads the attribute and injects the proper canvas container.
+     */
+
+    const bgAttributeMap = {
+      'load-wave':  { bgClass: 'brandon-load-wave',       factory: createLoadWaveSketch,            label: 'load-wave' },
+      'main-bg':    { bgClass: 'brandon-main-background', factory: createHazeBackgroundSketch,       label: 'main-background' },
+      'main-bg2':   { bgClass: 'brandon-main-background2',factory: createWhiteHazeBackgroundSketch,  label: 'main-background2' }
+    };
+
+    document.querySelectorAll('smp-section[data-brandon-bg]').forEach(section => {
+      const type = section.dataset.brandonBg;
+      const config = bgAttributeMap[type];
+      if (!config) return;
+      let backgroundDiv = section.querySelector(`div.${config.bgClass}`);
+      if (!backgroundDiv) {
+        backgroundDiv = document.createElement('div');
+        backgroundDiv.className = config.bgClass;
+        if (window.getComputedStyle(section).position === 'static') {
+          section.style.position = 'relative';
         }
-        waitForElementSizeAndInit(backgroundDiv, config.factory, config.label);
-      });
+        const contentWrapper = section.querySelector('.smp-content-wrapper');
+        if (contentWrapper) {
+          if (window.getComputedStyle(contentWrapper).position === 'static') {
+            contentWrapper.style.position = 'relative';
+          }
+          contentWrapper.style.zIndex = '1';
+          section.insertBefore(backgroundDiv, contentWrapper);
+        } else {
+          section.prepend(backgroundDiv);
+        }
+      }
+      waitForElementSizeAndInit(backgroundDiv, config.factory, config.label);
     });
   }
 
