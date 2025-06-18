@@ -1,0 +1,96 @@
+{
+  "review_metadata": {
+    "review_id": "REV-001",
+    "target_files": ["functions.php", "style.css", "brandon-custom-scripts.js"],
+    "review_type": "security_performance_validation",
+    "created_date": "2025-06-16",
+    "reviewer_type": "ai_agent",
+    "priority_level": "high"
+  },
+  "evaluation_criteria": {
+    "security": {
+      "weight": 25,
+      "checks": [
+        "nonce_verification_correct",
+        "capability_checks_appropriate", 
+        "input_sanitization_present",
+        "xss_prevention_adequate",
+        "csp_headers_secure"
+      ]
+    },
+    "performance": {
+      "weight": 25,
+      "checks": [
+        "dom_caching_beneficial",
+        "css_containment_appropriate",
+        "memory_leaks_prevented",
+        "error_rate_limiting_reasonable",
+        "script_dependencies_optimized"
+      ]
+    },
+    "compatibility": {
+      "weight": 25,
+      "checks": [
+        "wordpress_hooks_correct",
+        "semplice_editor_unaffected",
+        "jquery_conflicts_avoided",
+        "browser_support_maintained",
+        "spa_transitions_handled"
+      ]
+    },
+    "functionality": {
+      "weight": 25,
+      "checks": [
+        "existing_animations_preserved",
+        "p5js_canvas_management_robust",
+        "gsap_timeline_unaffected",
+        "button_reveals_working",
+        "dots_grid_functional"
+      ]
+    }
+  },
+  "red_flags": [
+    "breaks_existing_functionality",
+    "introduces_security_vulnerability", 
+    "causes_memory_leaks",
+    "conflicts_with_semplice_editor",
+    "degrades_performance",
+    "fails_on_dependency_missing"
+  ],
+  "validation_tests": {
+    "unit_tests": [
+      "test_gsap_initialization",
+      "test_dom_caching_performance", 
+      "test_p5_cleanup_on_spa_transition",
+      "test_error_rate_limiting",
+      "test_ajax_security_validation"
+    ],
+    "integration_tests": [
+      "test_semplice_editor_compatibility",
+      "test_wordpress_admin_functionality",
+      "test_button_animation_preservation",
+      "test_canvas_background_rendering",
+      "test_spa_page_transitions"
+    ],
+    "security_tests": [
+      "test_nonce_verification",
+      "test_capability_enforcement",
+      "test_input_sanitization",
+      "test_csp_header_effectiveness",
+      "test_xss_prevention"
+    ]
+  },
+  "scoring_rubric": {
+    "1-3": "critical_issues_prevent_implementation",
+    "4-6": "significant_modifications_required",
+    "7-8": "minor_adjustments_recommended", 
+    "9-10": "ready_for_implementation"
+  },
+  "required_deliverables": [
+    "overall_safety_rating_1_to_10",
+    "category_scores_security_performance_compatibility_functionality",
+    "specific_issues_with_line_numbers",
+    "implementation_recommendation",
+    "testing_checklist_for_staging"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "purpose": "Summarize key findings and actionable insights for debugging, integrating, and performance-auditing custom P5.js canvas backgrounds in a Semplice 7 WordPress theme.",
+  "context": {
+    "site_setup": {
+      "platform": "WordPress",
+      "theme": "Semplice 7 (with custom child theme)",
+      "custom_backgrounds": "Animated P5.js canvas backgrounds injected via JS"
+    },
+    "reference_materials": [
+      "brandon-main-background.html (custom background markup)",
+      "Semplice-video--background.html (native Semplice background video markup)",
+      "style.css (child theme, Brandon namespace)",
+      "brandon-custom-scripts.js (background injection, animation logic)",
+      "Firefox performance profile (profile.json.gz)"
+    ],
+    "css_js_integration": {
+      "layering": "Custom backgrounds are injected as absolutely-positioned divs (z-index: 0, pointer-events: none), preceding content in each <smp-section>. This matches Semplice's approach for video backgrounds.",
+      "scoping": "CSS/JS is modular, using Brandon-namespaced classes. Only intended sections are targeted via unique classes (e.g. .brandon-bg-main-bg).",
+      "best_practice": "No global or parent theme overrides; minimal, targeted injection and clean separation from core Semplice styles."
+    }
+  },
+  "integration_findings": {
+    "markup_structure": "Your injection pattern mirrors Semplice\u2019s: background container as the first child in each section, content wrappers above, using relative/absolute positioning and correct z-index.",
+    "js_logic": "Custom JS scans for target sections, injects the background container if missing, ensures all necessary stacking context, and initializes P5.js sketch. Avoids double-injection and warns if section height is insufficient.",
+    "css_validation": "All background layers are styled using Brandon namespace, compatible with Semplice. CSS avoids collision with core theme."
+  },
+  "performance_audit": {
+    "profile_type": "Firefox performance profile (.json.gz)",
+    "main_thread_cpu": {
+      "total_samples": 10433,
+      "total_cpu_time_ms": 270300,
+      "avg_cpu_per_sample_ms": 25.9,
+      "max_cpu_per_sample_ms": 226200
+    },
+    "event_delay": {
+      "samples": 3,
+      "avg_delay_ms": 0,
+      "max_delay_ms": 0,
+      "delays_over_50ms": 0
+    },
+    "conclusion": "No significant browser jank, lockups, or animation stalls detected. The P5 background does add moderate CPU load (~26ms/sample), which may limit 60fps on lower-end hardware, but should be acceptable for a visually-driven portfolio."
+  },
+  "actionable_recommendations": [
+    "For best results, keep P5.js backgrounds to one per page and optimize sketch code for efficiency (limit dot count, avoid unnecessary redraws).",
+    "Monitor performance on a range of devices, especially laptops with integrated graphics.",
+    "For detailed function-level bottleneck analysis, open the Firefox profile in https://profiler.firefox.com/ and inspect flame graphs.",
+    "Use DevTools FPS meter for live animation feedback; target frame times under 16ms for true 60fps.",
+    "If multiple backgrounds are required, stagger or reduce animation load per section."
+  ],
+  "validation_checklist": [
+    "Confirm custom backgrounds are injected only on intended sections and do not interfere with content layout or interactions.",
+    "Verify that section and content wrapper stacking/z-index remain correct after injection.",
+    "Check that removing P5 backgrounds (in DevTools or code) reduces CPU to baseline.",
+    "Test site in both Semplice Editor and published mode for parity."
+  ],
+  "meta": {
+    "authored_by": "ChatGPT AI assistant, for Brandon Leach",
+    "date": "2025-06-17",
+    "based_on_guidelines": "ai_llm_debugging_onboarding.json and interactive debugging session"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "onboarding": {
+    "purpose": "Equip a new AI/LLM with full context and best practices for debugging custom code in a Semplice 7 child theme",
+    "scope": "Covers CSS, JS, and PHP debugging, emphasizing minimal overrides, performance, and seamless integration with Semplice’s parent theme",
+    "best_practices": [
+      {
+        "title": "Minimal, Targeted Overrides",
+        "details": "Only add the exact rule(s) needed to fix the identified issue. Avoid parent-level or global hacks unless explicitly required."
+      },
+      {
+        "title": "Match Only Differences",
+        "details": "Use DevTools to inspect computed styles and override only the specific property causing the misalignment or conflict."
+      },
+      {
+        "title": "Trust User-Proven Fixes",
+        "details": "If the user’s inspect-mode snippet resolves the issue, accept it without adding extra code."
+      },
+      {
+        "title": "Scoped Enqueueing",
+        "details": "Load scripts (GSAP, P5) and styles only where needed. If site‑wide use is confirmed, keep enqueues global but remove redundant exception handling."
+      }
+    ],
+    "debug_structure": {
+      "step1": "Gather all relevant files (functions.php, style.css, custom JS)",
+      "step2": "Confirm parent theme context: understand Semplice 7 child-parent load order and code modules",
+      "step3": "Inspect element or console logs for misbehavior (alignment issues, double-inits, 404s)",
+      "step4": "Identify minimal fix and test in DevTools",
+      "step5": "Implement fix in code, scoped to precise selectors/modules",
+      "step6": "Verify across breakpoints and ensure no regressions"
+    },
+    "required_information": [
+      "Sample page markup (head/body or affected <smp-nav-section>)",
+      "Console messages on page load",
+      "List of pages using each custom script",
+      "Exact user-proven code snippets for immediate fixes"
+    ],
+    "recommendations": [
+      "Include a clear acknowledgment step in every response: 'I have read and will follow the AI/LLM CSS Debugging Guidelines exactly.'",
+      "Maintain separate modules for CSS, JS, and PHP refactors",
+      "Limit console logging in production builds",
+      "Remove unused code and commented-out cruft"
+    ],
+    "checklist": [
+      "Have I loaded and understood style.css, functions.php, and custom JS?",
+      "Did I confirm parent theme load order and child overrides?",
+      "Have I inspected computed styles and console logs?",
+      "Am I applying only the minimal fix proven by the user?",
+      "Have I scoped changes to the precise selector or module?",
+      "Did I test across responsive breakpoints?"
+    ]
+  }
+}

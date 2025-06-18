@@ -1,0 +1,67 @@
+{
+  "date": "2025-06-17 04:39:59.815356",
+  "context": "Debugging Semplice 7 WordPress Theme with GSAP/SplitText Integration - AI/LLM Onboarding Summary",
+  "use_case": "Provide explicit, structured troubleshooting log for any AI/LLM to accelerate onboarding and avoid repeating previous mistakes in custom animation integration with Semplice 7 and GSAP.",
+  "issues": [
+    {
+      "issue": "GSAP Version Mismatch Between Core and Plugins",
+      "symptoms": [
+        "Version mismatch warnings in console.",
+        "Unpredictable plugin bugs or features not working (esp. SplitText)."
+      ],
+      "fix": [
+        "Always match all GSAP plugins to the version bundled by Semplice (currently 3.12.5).",
+        "If using SplitText 3.13.0+ from CDN, accept risk of version mismatch\u2014avoid new SplitText features if GSAP core is older."
+      ],
+      "status": "SplitText (3.13.0+) is loaded via CDN because Semplice does not bundle it; all other plugins must match Semplice's bundled core."
+    },
+    {
+      "issue": "Cannot Confirm Script Loads via functions.php or Theme Enqueue",
+      "symptoms": [
+        "No GSAP or plugin scripts visible in DevTools Network when using functions.php enqueue.",
+        "window.gsap/version not as expected."
+      ],
+      "fix": [
+        "Add <script> tags for CDN scripts directly in Semplice Editor Custom HTML Head to guarantee loading and script order."
+      ],
+      "status": "Confirmed only Head-injected scripts are reliably loaded; further investigation needed to clarify need for redundant/duplicate loading and best practice for custom plugin integration."
+    },
+    {
+      "issue": "SplitText 3.12.5 Not Available via CDN",
+      "symptoms": [
+        "404 error when trying to load SplitText 3.12.5 from CDN.",
+        "Plugin not found, custom animation fails."
+      ],
+      "fix": [
+        "Only load SplitText via CDN for 3.13.0+.",
+        "If using Semplice 7 (GSAP 3.12.5), load SplitText from CDN at 3.13.0+ and accept version mismatch risks."
+      ],
+      "status": "SplitText available only because loaded via CDN at new version. Not bundled by Semplice."
+    },
+    {
+      "issue": "Font and Favicon 404s",
+      "symptoms": [
+        "Console/network errors for missing .woff2, .ico files.",
+        "FOUT/FOIT or layout shifts."
+      ],
+      "fix": [
+        "Verify upload paths and file existence for all font and favicon resources."
+      ],
+      "status": "Not critical for JS or animation, but should be fixed for best UX."
+    }
+  ],
+  "key_learnings": [
+    "ALWAYS check loaded script versions with DevTools (Network & Console).",
+    "Never assume enqueued scripts will override Semplice core\u2014bundled scripts load in shared/minified assets.",
+    "SplitText is the only GSAP plugin that can be loaded at a different version, but should be used conservatively.",
+    "If only SplitText is loaded via CDN, GSAP core may still be old; avoid features requiring newer GSAP.",
+    "For reliability, custom plugin loads should match the GSAP core version in use, unless explicitly verified.",
+    "Document every script source, version, and load method for repeatable onboarding."
+  ],
+  "todo": [
+    "Determine if loading GSAP via both Semplice and custom scripts creates unnecessary bloat or conflicts.",
+    "Clarify the best practice for plugin integration\u2014should AI/LLM rely on Semplice's core or always load its own?",
+    "Create AI/LLM diagnostics to scan for version mismatches and missing plugins automatically."
+  ],
+  "final_directive_for_AI_LLM": "On load, immediately confirm GSAP core version and all plugin versions using DevTools and window.gsap/SplitText objects. Document and alert user of any mismatches. If SplitText is loaded at a different version, restrict to compatible feature set. Log all findings and update onboarding record before proceeding with any custom code suggestions."
+}

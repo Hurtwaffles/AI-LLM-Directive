@@ -1,0 +1,62 @@
+{
+    "date": "2025-06-17",
+    "project": "Semplice 7: Universal Mask Reveal Animation for Designers",
+    "author": "Brandon Leach & ChatGPT",
+    "task\_summary": "Enable any designer (with no coding required) to apply a visually-perfect animated mask reveal to any Semplice text block, simply by adding a CSS class in the Semplice editor. The effect must match the existing animated button/logo reveal, using the site's custom cubic-bezier easing, and work for all font/typography/spacing setups.",
+    "primary\_need": {
+    "designer\_action": "User adds .brandon-split-reveal (or similar) class to any text element in Semplice.",
+    "expected\_result": "The text will reveal with a dual-layer vertical mask animation, visually identical to existing site button/logo effects. All spacing, font, color, sizing, and animation easing must match the site's standards.",
+    "visual\_priority": "Code structure is secondary; visual output and ease of use for designers is the contract. SplitText is used only if it supports this without breaking visual fidelity."
+    },
+    "custom\_ease": "cubic-bezier(.77,0,.18,1)",
+    "technical\_parameters": {
+    "animation": \[
+    "At rest: one text copy visible, second copy out of view below",
+    "On hover/focus: top copy animates up out, bottom copy animates up into view, using cubic-bezier(.77,0,.18,1) transition",
+    "No manual HTML edits required, no layout jump or spacing bug"
+    ],
+    "css": \[
+    "All font properties, sizing, and color must be inherited from parent/section",
+    "Width calibrator used for perfect sizing of mask"
+    ],
+    "js": \[
+    "On DOM ready and Semplice SPA navigation, JS finds all .brandon-split-reveal elements",
+    "JS replaces the element's content with a <span class='brandon-split-mask'> structure containing two text copies (top/bottom) and a calibrator span.",
+    "SplitText is used for extensibility, but only if it preserves style fidelity and doesn't break typography."
+    ]
+    },
+    "current\_code": {
+    "js": "document.querySelectorAll('.brandon-split-reveal').forEach(el => { if (el.classList.contains('brandon-split-initialized')) return; const rawText = el.textContent.trim(); el.innerHTML = ''; const mask = document.createElement('span'); mask.className = 'brandon-split-mask'; const topLayer = document.createElement('span'); topLayer.className = 'brandon-split-layer top'; const bottomLayer = document.createElement('span'); bottomLayer.className = 'brandon-split-layer bottom'; const widthCalibrator = document.createElement('span'); widthCalibrator.className = 'brandon-split-width-calibrator'; if (typeof SplitText === 'function') { new SplitText(topLayer, { type: 'lines' }); new SplitText(bottomLayer, { type: 'lines' }); } topLayer.textContent = rawText; bottomLayer.textContent = rawText; widthCalibrator.textContent = rawText; mask.appendChild(topLayer); mask.appendChild(bottomLayer); mask.appendChild(widthCalibrator); el.appendChild(mask); el.classList.add('brandon-split-initialized'); });",
+    "css": ".brandon-split-reveal { display\:inline-flex; align-items\:center; position\:relative; background\:none; border\:none; font-family\:inherit; font-size\:inherit; color\:inherit; letter-spacing\:inherit; } .brandon-split-mask { position\:relative; display\:inline-block; overflow\:hidden; height:1em; line-height:1; } .brandon-split-layer { display\:block; position\:absolute; left:0; width:100%; font-family\:inherit; font-size\:inherit; letter-spacing\:inherit; line-height:1; white-space\:pre; pointer-events\:none; transition\:transform 0.45s cubic-bezier(.77,0,.18,1); will-change\:transform; } .brandon-split-layer.top { top:0; transform\:translateY(0%); } .brandon-split-layer.bottom { top:0; transform\:translateY(100%); } .brandon-split-reveal\:hover .brandon-split-layer.top, .brandon-split-reveal\:focus .brandon-split-layer.top { transform\:translateY(-100%); } .brandon-split-reveal\:hover .brandon-split-layer.bottom, .brandon-split-reveal\:focus .brandon-split-layer.bottom { transform\:translateY(0%); } .brandon-split-width-calibrator { visibility\:hidden; opacity:0; pointer-events\:none; position\:absolute; left:0; top:0; height:0; font-family\:inherit; font-size\:inherit; letter-spacing\:inherit; line-height:1; white-space\:pre; }"
+    },
+    "debug\_status": {
+    "inspected": \[
+    "SplitText loads (200 OK), no direct JS errors for mask reveal.",
+    "DOM structure after JS is correct (mask with top/bottom/calibrator).",
+    "Text is not visible or has a small outlined box, no animation on hover.",
+    "Computed CSS shows font-size and family are reset to theme default (not intended heading style), and a 3px solid black border is applied from global/theme CSS.",
+    "Font inheritance is broken when .brandon-split-reveal is applied.",
+    "Original text block uses a <p> with inline font size, line-height, and color; when replaced, these styles are not inherited by new structure.",
+    "Performance/jank on Semplice SPA navigation (likely due to repeated init or resource leaks)."
+    ],
+    "open\_questions": \[
+    "What global CSS rule is adding the border/font reset to the spans?",
+    "How to guarantee mask layers always inherit correct font/size/spacing?",
+    "Should mask structure preserve/blockify the original block element for reliable inheritance?",
+    "Does bypassing SplitText or selectively cloning inline styles from parent solve the inheritance issue?"
+    ]
+    },
+    "learnings": \[
+    "Visual output is the true spec—not the markup or underlying JS/DOM structure.",
+    "SplitText, while powerful, can break visual inheritance in CMS contexts like Semplice if not handled with extra care.",
+    "Global or theme-level span CSS can override/ruin nested animation structures if font inheritance is broken.",
+    "All custom animation code must robustly preserve or re-apply inherited typography, especially when replacing/rewrapping content blocks."
+    ],
+    "immediate\_directives\_for\_future\_debuggers": \[
+    "Never change animation code until you inspect and document all global and parent CSS rules affecting font, border, and display inheritance.",
+    "Test solution by assigning class to <p>, <span>, <h1>, and ensure animation always matches original.",
+    "Do not remove SplitText unless you confirm that preserving block/inline parent and inherited styles cannot be achieved any other way.",
+    "Focus all patch/fix energy on visual fidelity and robust designer workflow."
+    ]
+    }
+    

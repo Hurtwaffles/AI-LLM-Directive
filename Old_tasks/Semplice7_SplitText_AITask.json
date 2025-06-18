@@ -1,0 +1,26 @@
+{
+  "date": "2025-06-17 04:45:03.756469",
+  "task": "Replicate animated mask/reveal effect from logo and nav button for any text block in Semplice using SplitText or custom JS, triggered via a custom class.",
+  "instructions_from_user": [
+    "The animation must closely match my current logo and nav button reveal effect: on hover, the text 'slides out' (up), and a duplicate version 'slides in' from below, inside a mask. The effect should look seamless\u2014no extra space or vertical jump, and match font/weight/spacing from Semplice editor.",
+    "No manual HTML edits\u2014should be applied by adding a custom class in the Semplice editor (e.g., .brandon-split-reveal).",
+    "Should work on any text block or button using this class, inheriting Semplice typography styles.",
+    "GSAP core is loaded by Semplice (v3.12.5), SplitText loaded by me (v3.13.0+) from CDN. Solution must handle this safely."
+  ],
+  "elements_to_copy": [
+    "Logo reveal animation (dual-layer text, masked, both layers animate simultaneously).",
+    "Nav button reveal animation (same as logo; top text animates up and out, bottom text animates in from below)."
+  ],
+  "animation_snippet_example": {
+    "html_structure": "<span class='brandon-split-mask'><span class='brandon-split-top'>TEXT</span><span class='brandon-split-bottom'>TEXT</span></span>",
+    "css": ".brandon-split-mask { display:inline-block; overflow:hidden; height:1em; position:relative; } .brandon-split-top, .brandon-split-bottom { display:block; position:absolute; left:0; width:100%; } .brandon-split-top { position:relative; z-index:1; } .brandon-split-bottom { top:100%; z-index:2; }",
+    "js": "document.querySelectorAll('.brandon-split-reveal').forEach(function(el){const text=el.textContent.trim();el.innerHTML=`<span class='brandon-split-mask'><span class='brandon-split-top'>${text}</span><span class='brandon-split-bottom'>${text}</span></span>`;const top=el.querySelector('.brandon-split-top');const bottom=el.querySelector('.brandon-split-bottom');el.addEventListener('mouseenter',()=>{gsap.to(top,{y:'-100%',duration:0.4,ease:'power2.in'});gsap.to(bottom,{y:'-100%',duration:0.4,ease:'power2.out'});});el.addEventListener('mouseleave',()=>{gsap.to(top,{y:'0%',duration:0.4,ease:'power2.out'});gsap.to(bottom,{y:'0%',duration:0.4,ease:'power2.in'});});});"
+  },
+  "ai_llm_suggested_solution": [
+    "Use JS to dynamically wrap any element with the custom class in the dual-layer mask structure.",
+    "Animate both top and bottom layers with GSAP on hover (or other desired trigger).",
+    "Ensure no visual shift or loss of Semplice\u2019s typography styles by copying computed styles if necessary.",
+    "Before building, always check window.gsap.version and window.SplitText to confirm presence and warn user of version mismatches or risks.",
+    "If possible, modularize the solution so user can change animation timing, trigger, or easing without manual edits."
+  ]
+}

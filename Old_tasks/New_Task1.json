@@ -1,0 +1,33 @@
+{
+  "task": "Replicate the animated mask/reveal effect used in .brandon-animated-button-reveal for any Semplice text block via a custom class. Also, enable swapping the nav logo from B.LEACH to BRANDON LEACH with the same reveal animation, using .brandon-logo-reveal logic.",
+  "requirements": [
+    "The animation and mask behavior must match the original .brandon-animated-button-reveal JS/CSS exactly (dual-layer mask, top and bottom text animate together, no extra space).",
+    "Custom class approach: must work by assigning a class in Semplice UI—no manual HTML editing.",
+    "Font and text style must inherit Semplice typography, with no layout jumps.",
+    "Provide a secondary example where the same logic can replace B.LEACH with a full BRANDON LEACH reveal in the nav using .brandon-logo-reveal structure.",
+    "Use only code compatible with Semplice’s JS/CSS and GSAP version setup (GSAP 3.12.5 core by Semplice, SplitText 3.13.0+ by user if needed)."
+  ],
+  "user_animation_code_examples": {
+    "animated_button_reveal": {
+      "html": "<a class=\"brandon-animated-button-reveal\"><span class=\"brandon-button-reveal-mask\"><span class=\"brandon-button-reveal-text top\">WORK</span><span class=\"brandon-button-reveal-text bottom\">WORK</span><span class=\"brandon-button-reveal-width-calibrator\">WORK</span></span></a>",
+      "css": ".brandon-animated-button-reveal {} .brandon-button-reveal-mask { position:relative; display:inline-block; overflow:hidden; } .brandon-button-reveal-text.top, .brandon-button-reveal-text.bottom { display:block; position:absolute; left:0; width:100%; transition:transform 0.4s cubic-bezier(.77,0,.18,1); } .brandon-button-reveal-text.top { top:0; z-index:1; } .brandon-button-reveal-text.bottom { top:100%; z-index:2; } .brandon-button-reveal-width-calibrator { visibility:hidden; position:absolute; pointer-events:none; }",
+      "js": "document.querySelectorAll('.brandon-animated-button-reveal').forEach(function(btn) { btn.addEventListener('mouseenter', function() { const top = btn.querySelector('.top'); const bottom = btn.querySelector('.bottom'); top.style.transform = 'translateY(-100%)'; bottom.style.transform = 'translateY(-100%)'; }); btn.addEventListener('mouseleave', function() { const top = btn.querySelector('.top'); const bottom = btn.querySelector('.bottom'); top.style.transform = 'translateY(0%)'; bottom.style.transform = 'translateY(0%)'; }); });"
+    },
+    "logo_reveal_side_scenario": {
+      "html": "<a class=\"brandon-logo-reveal-link\"><span class=\"brandon-logo-static\">B</span><span class=\"brandon-logo-reveal-mask\"><span class=\"brandon-logo-reveal-text top\">.LEACH</span><span class=\"brandon-logo-reveal-text bottom\">RANDON LEACH</span><span class=\"brandon-logo-reveal-width-calibrator\">RANDON LEACH</span></span></a>",
+      "css": ".brandon-logo-reveal-link {} .brandon-logo-reveal-mask { position:relative; display:inline-block; overflow:hidden; } .brandon-logo-reveal-text.top, .brandon-logo-reveal-text.bottom { display:block; position:absolute; left:0; width:100%; transition:transform 0.4s cubic-bezier(.77,0,.18,1); } .brandon-logo-reveal-text.top { top:0; z-index:1; } .brandon-logo-reveal-text.bottom { top:100%; z-index:2; } .brandon-logo-reveal-width-calibrator { visibility:hidden; position:absolute; pointer-events:none; }",
+      "js": "document.querySelectorAll('.brandon-logo-reveal-link').forEach(function(logo) { logo.addEventListener('mouseenter', function() { const top = logo.querySelector('.top'); const bottom = logo.querySelector('.bottom'); top.style.transform = 'translateY(-100%)'; bottom.style.transform = 'translateY(-100%)'; }); logo.addEventListener('mouseleave', function() { const top = logo.querySelector('.top'); const bottom = logo.querySelector('.bottom'); top.style.transform = 'translateY(0%)'; bottom.style.transform = 'translateY(0%)'; }); });"
+    }
+  },
+  "ai_llm_instructions": [
+    "Implement your own JS/CSS logic for applying this mask/reveal effect to any element with a designated class (e.g., .brandon-split-reveal), supporting Semplice's typography and no layout jump. Do NOT view user code until after attempting your solution.",
+    "When finished, review the user's provided code and compare with your own approach."
+  ],
+  "solution_for_review_after_attempt": {
+    "explanation": "The user's implementation wraps the text in a mask span, duplicates the text as top/bottom layers, and uses a width-calibrator span to ensure no layout shift. Animations are performed by translating Y of .top and .bottom elements simultaneously with CSS transitions or GSAP. This ensures pixel-perfect font alignment, dynamic width sizing, and no manual HTML editing by the user. The same logic is reused for nav logo reveal (B.LEACH to BRANDON LEACH), keeping branding consistent.",
+    "code_approach": "Dynamically build the dual-layer mask structure in JS for any target element. Apply transitions to .top and .bottom children on hover. For nav/logo scenario, allow text swap by using .top/.bottom logic on both B and LEACH sections. Width-calibrator hidden span ensures mask always fits the content."
+  },
+  "compare_and_contrast_instruction": [
+    "After reviewing your solution and the user's, analyze structural and functional differences. Did you duplicate text nodes the same way? Did you handle dynamic width? Did your animation logic risk FOUC or spacing issues? Explain why the user's approach is preferred for Semplice's layout and branding requirements."
+  ]
+}

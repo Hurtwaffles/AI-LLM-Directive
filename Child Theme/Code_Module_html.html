@@ -1,0 +1,811 @@
+//*Custome code modules using semplice child theme *//
+
+/*===================================*/
+/*NAV FOR PROJECT PAGES (WHITE BACKGROUND)*/
+/*===================================*/
+
+/*LOGO HTML: Directs back to home page (brandonleach.co)*/
+
+<a href="http://www.brandonleach.co" class="brandon-logo-reveal-link" style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-logo-static">B</span>
+  <span class="brandon-logo-reveal-mask">
+    <span class="brandon-logo-reveal-text top">.LEACH</span>
+    <span class="brandon-logo-reveal-text bottom">RANDON LEACH</span>
+    <span class="brandon-logo-reveal-width-calibrator">RANDON LEACH</span>
+  </span>
+</a>
+
+/*WORK BUTTON: Opens menu overlay for navigation between projects*/
+
+<a class="brandon-animated-button-reveal brandon-work-menu-trigger"
+   style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">WORK</span>
+    <span class="brandon-button-reveal-text bottom">WORK</span>
+    <span class="brandon-button-reveal-width-calibrator">WORK</span>
+  </span>
+</a>
+
+/*ABOUT BUTTON: Directs to about section within homepage (brandonleach.com/#about-section)*/
+
+<a class="brandon-animated-button-reveal"
+   href="http://www.brandonleach.co/#about-section"
+   style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">ABOUT</span>
+    <span class="brandon-button-reveal-text bottom">ABOUT</span>
+    <span class="brandon-button-reveal-width-calibrator">ABOUT</span>
+  </span>
+</a>
+
+*/for mobile: dot grid hamburger*/
+
+<!-- To use this, ensure 'brandon-dots-dark-theme' class is NOT on the trigger div -->
+<div class="brandon-dots-grid-trigger brandon-dots-dark-theme brandon-work-menu-trigger" id="brandonDotsGridMenu" aria-label="Open Menu" role="button" tabindex="0">
+    <div class="brandon-dots-grid">
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+    </div>
+  </div>
+
+
+/*OVERLAY MENU BUTTONS*/
+/*NEED TO CONSIDER RESPONSIVE TEXT SIZE*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/coorsbanquet/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">COORS BANQUET</span>
+    <span class="brandon-button-reveal-text bottom">COORS BANQUET</span>
+    <span class="brandon-button-reveal-width-calibrator">COORS BANQUET</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/lumea/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">LUMEA IPL</span>
+    <span class="brandon-button-reveal-text bottom">LUMEA IPL</span>
+    <span class="brandon-button-reveal-width-calibrator">LUMEA IPL</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/millerlite/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">MILLER LITE</span>
+    <span class="brandon-button-reveal-text bottom">MILLER LITE</span>
+    <span class="brandon-button-reveal-width-calibrator">MILLER LITE</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/oneblade/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">ONEBLADE</span>
+    <span class="brandon-button-reveal-text bottom">ONEBLADE</span>
+    <span class="brandon-button-reveal-width-calibrator">ONEBLADE</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/underdevelopment/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">CELESTAR</span>
+    <span class="brandon-button-reveal-text bottom">CELESTAR</span>
+    <span class="brandon-button-reveal-width-calibrator">CELESTAR</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/underdevelopment/"
+   style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">PHILIPS 1000</span>
+    <span class="brandon-button-reveal-text bottom">PHILIPS 1000</span>
+    <span class="brandon-button-reveal-width-calibrator">PHILIPS 1000</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*===================================*/
+/*NAV FOR HOME PAGE (BLACK BACKGROUND)*/
+/*===================================*/
+
+/*LOGO HTML: Directs back to home page (#)*/
+
+<a href="#" class="brandon-logo-reveal-link" style="font-size: 1rem; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+    <span class="brandon-logo-static">B</span>
+    <span class="brandon-logo-reveal-mask">
+      <span class="brandon-logo-reveal-text top">.LEACH</span>
+      <span class="brandon-logo-reveal-text bottom">RANDON LEACH</span>
+      <span class="brandon-logo-reveal-width-calibrator">RANDON LEACH</span>
+    </span>
+  </a>
+
+/*WORK BUTTON: Opens menu overlay for navigation between projects*/
+
+<a class="brandon-animated-button-reveal brandon-work-menu-trigger"
+   style="font-size: 1rem; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">WORK</span>
+    <span class="brandon-button-reveal-text bottom">WORK</span>
+    <span class="brandon-button-reveal-width-calibrator">WORK</span>
+  </span>
+</a>
+
+/*ABOUT BUTTON: Directs to about section within homepage (#about-section)*/
+
+<a class="brandon-animated-button-reveal"
+   href="#about-section"
+   style="font-size: 1rem; color: #f2f2f3; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">ABOUT</span>
+    <span class="brandon-button-reveal-text bottom">ABOUT</span>
+    <span class="brandon-button-reveal-width-calibrator">ABOUT</span>
+  </span>
+</a>
+
+*/for mobile: dot grid hamburger*/
+
+<!-- To use this, ensure 'brandon-dots-dark-theme' class is NOT on the trigger div -->
+<div class="brandon-dots-grid-trigger brandon-work-menu-trigger" id="brandonDotsGridMenu" aria-label="Open Menu" role="button" tabindex="0">
+    <div class="brandon-dots-grid">
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+      <div class="brandon-dot"></div>
+    </div>
+  </div>
+
+
+  /*OVERLAY MENU BUTTONS*/
+  /*NEED TO CONSIDER RESPONSIVE TEXT SIZE*/
+
+  <a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/coorsbanquet/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">COORS BANQUET</span>
+    <span class="brandon-button-reveal-text bottom">COORS BANQUET</span>
+    <span class="brandon-button-reveal-width-calibrator">COORS BANQUET</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/lumea/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">LUMEA IPL</span>
+    <span class="brandon-button-reveal-text bottom">LUMEA IPL</span>
+    <span class="brandon-button-reveal-width-calibrator">LUMEA IPL</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/millerlite/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">MILLER LITE</span>
+    <span class="brandon-button-reveal-text bottom">MILLER LITE</span>
+    <span class="brandon-button-reveal-width-calibrator">MILLER LITE</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/oneblade/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">ONEBLADE</span>
+    <span class="brandon-button-reveal-text bottom">ONEBLADE</span>
+    <span class="brandon-button-reveal-width-calibrator">ONEBLADE</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/underdevelopment/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">CELESTAR</span>
+    <span class="brandon-button-reveal-text bottom">CELESTAR</span>
+    <span class="brandon-button-reveal-width-calibrator">CELESTAR</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up"
+   href="/work/underdevelopment/"
+   style="font-size: 2.166125rem; color: var(--brandon-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">PHILIPS 1000</span>
+    <span class="brandon-button-reveal-text bottom">PHILIPS 1000</span>
+    <span class="brandon-button-reveal-width-calibrator">PHILIPS 1000</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*===================================*/
+/*FOOTER BLACK BACKGROUND/MAIN PAGE*/
+/*brandon-bg-main-bg*/
+/*===================================*/
+
+/*RESUME DOWNLOAD LINK*/
+/*NEED TO INSURE THIS OPENS IN NEW TAB*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-down brandon-large brandon-text brandon-tight-spacing"
+   href="https://brandonleach.co/wp-content/uploads/2025/05/BrandonLeach_CV_2025.pdf"
+   style="font-size: 18pt; color: #f2f2f3; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">RESUME</span>
+    <span class="brandon-button-reveal-text bottom">RESUME</span>
+    <span class="brandon-button-reveal-width-calibrator">RESUME</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↘</span>
+    <span class="brandon-arrow brandon-arrow-two">↘</span>
+  </span>
+</a>
+
+/*CONTACT BUTTON: MAILTO: leachbr@gmail.com*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up brandon-large brandon-text brandon-tight-spacing"
+   href="mailto:leachbr@gmail.com"
+   style="font-size: 18pt; color: #f2f2f3; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">CONTACT</span>
+    <span class="brandon-button-reveal-text bottom">CONTACT</span>
+    <span class="brandon-button-reveal-width-calibrator">CONTACT</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*LINKEDIN BUTTON: LINKEDIN.com/in/leachbr*/
+/*NEED TO INSURE THIS OPENS IN NEW TAB*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up brandon-large brandon-dark-text brandon-tight-spacing"
+   href="http://www.linkedin.com/in/leachbr"
+   style="font-size: 18pt; color: #f2f2f3; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">LINKEDIN</span>
+    <span class="brandon-button-reveal-text bottom">LINKEDIN</span>
+    <span class="brandon-button-reveal-width-calibrator">LINKEDIN</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*===================================*/
+/*FOOTER WHITE BACKGROUND/PROJECT PAGE*/
+/*brandon-bg-main-bg2*/
+/*===================================*/
+
+/*RESUME DOWNLOAD LINK*/
+/*NEED TO INSURE THIS OPENS IN NEW TAB*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-down brandon-large brandon-dark-text brandon-tight-spacing"
+   href="https://brandonleach.co/wp-content/uploads/2025/05/BrandonLeach_CV_2025.pdf"
+   style="font-size: 18pt; color: #0E0E10; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">RESUME</span>
+    <span class="brandon-button-reveal-text bottom">RESUME</span>
+    <span class="brandon-button-reveal-width-calibrator">RESUME</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↘</span>
+    <span class="brandon-arrow brandon-arrow-two">↘</span>
+  </span>
+</a>
+
+/*CONTACT BUTTON: MAILTO: leachbr@gmail.com*/
+/*NEED TO INSURE THIS OPENS IN NEW TAB*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up brandon-large brandon-dark-text brandon-tight-spacing"
+   href="mailto:leachbr@gmail.com"
+   style="font-size: 18pt; color: #0E0E10; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">CONTACT</span>
+    <span class="brandon-button-reveal-text bottom">CONTACT</span>
+    <span class="brandon-button-reveal-width-calibrator">CONTACT</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*LINKEDIN BUTTON: LINKEDIN.com/in/leachbr*/
+/*NEED TO INSURE THIS OPENS IN NEW TAB*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up brandon-large brandon-dark-text brandon-tight-spacing"
+   href="mailto:leachbr@gmail.com"
+   style="font-size: 18pt; color: #0E0E10; font-family: 'Soehne-Mono-Buch', monospace; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">LINKEDIN</span>
+    <span class="brandon-button-reveal-text bottom">LINKEDIN</span>
+    <span class="brandon-button-reveal-width-calibrator">LINKEDIN</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+/*learn more: about button directing to brandonleach.co/#about-section*/
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up brandon-small brandon-tight-spacing"
+   href="http://www.brandonleach.co/#about-section"
+   style="font-size: 12pt; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">LEARN MORE</span>
+    <span class="brandon-button-reveal-text bottom">LEARN MORE</span>
+    <span class="brandon-button-reveal-width-calibrator">LEARN MORE</span>
+  </span>
+  <span class="brandon-arrow-mask">
+    <span class="brandon-arrow brandon-arrow-one">↗</span>
+    <span class="brandon-arrow brandon-arrow-two">↗</span>
+  </span>
+</a>
+
+
+
+/*===================================*/
+/*PROJECT PAGE NEXT PROJECT NAVIGATION*/
+/*===================================*/
+
+/*link to "others" page, will eventually be previews to other projects !!BROKEN!!*/
+/*CURRENTLY NOT CORRECT FONT SIZE: NEEDS TO READ AS 12.006px- "SEE QUICK LINKS"*/
+/*CURRENTLY DOES NOT INHERIT RIGHT SIDE ALIGNMENT, JUSTIFIED RIGHT (LOCKED INTO RIGHT SIDE SECTION GUTTER) */
+
+<a class="brandon-animated-button-reveal brandon-arrow-diag-up" 
+   href="http://www.brandonleach.co/others" 
+   style="font-size: 0.667rem; color: #2A2A2E; font-family: 'Soehne-mono-kraftig', monospace, sans-serif; max-width: max-content; display: inline-flex;">
+   <span class="brandon-button-reveal-mask">
+     <span class="brandon-button-reveal-text top">OTHERS</span>
+     <span class="brandon-button-reveal-text bottom">OTHERS</span>
+     <span class="brandon-button-reveal-width-calibrator">OTHERS</span>
+   </span>
+   <span class="brandon-arrow-mask">
+     <span class="brandon-arrow brandon-arrow-one">↗</span>
+     <span class="brandon-arrow brandon-arrow-two">↗</span>
+   </span>
+</a>
+
+/*LEFT SIDE (PROPERLY ALIGNED IN PAGE) TEXT LABEL, AS REFERENCE*/
+
+<span class="font_7uv3mtz7d" style="color: rgb(42, 42, 46); letter-spacing: 0.028rem; text-align: left;" data-letter-spacing-xl="0.028rem" data-text-align-xl="left" data-mce-style="color: rgb(42, 42, 46); letter-spacing: 0.028rem; text-align: left;">|•] QUICK LINKS [•|</span>
+
+/*NEXT PAGE PROJECT NAV !!BROKEN!!*/
+/*NEED CODE CHECKED - BREAKS INTO TWO LINES ON RESIZE*/
+/*NEEDS CODE REVIEW AS ADAPTED CODE MYSELF*/
+
+<a class="brandon-animated-button-reveal"
+   href="http://www.brandonleach.co/work/millerlite"
+   style="font-size: 88.002px; color: #2A2A2E; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+  <span class="brandon-button-reveal-mask">
+    <span class="brandon-button-reveal-text top">MILLER LITE</span>
+    <span class="brandon-button-reveal-text bottom">MILLER LITE</span>
+    <span class="brandon-button-reveal-width-calibrator">MILLER LITE</span>
+  </span>
+</a>
+
+
+
+/*===================================*/
+/*LOAD-WAVE ANIMATION !!BROKEN!!*/
+/*NOT WORKING ON DESIGNATED BACKGROUNDS*/
+/*===================================*/
+
+/*brandon-load-wave inspect of page at: https://brandonleach.co/others*/
+/*Console log on load:
+Note: MonsterInsights does not track you as a logged-in site administrator to prevent site owners from accidentally skewing their own Google Analytics data.
+If you are testing Google Analytics code, please do so either logged out or in the private browsing/incognito mode of your web browser.
+jquery-migrate.min.js?ver=3.4.1:2 JQMIGRATE: Migrate is installed, version 3.4.1
+p5.min.js:2 Did you just try to use p5.js's set() function? If so, you may want to move it into your sketch's setup() function.
+
+For more details, see: https://github.com/processing/p5.js/wiki/p5.js-overview#why-cant-i-assign-variables-using-p5-functions-and-variables-before-setup
+mediaelement-and-player.min.js?ver=4.2.17:12 Uncaught TypeError: Cannot set properties of undefined (setting 'mejs')
+    at 7.3 (mediaelement-and-player.min.js?ver=4.2.17:12:21595)
+    at d (mediaelement-and-player.min.js?ver=4.2.17:12:254)
+    at mediaelement-and-player.min.js?ver=4.2.17:12:305
+    at 6.2 (mediaelement-and-player.min.js?ver=4.2.17:12:12352)
+    at d (mediaelement-and-player.min.js?ver=4.2.17:12:254)
+    at r (mediaelement-and-player.min.js?ver=4.2.17:12:420)
+    at mediaelement-and-player.min.js?ver=4.2.17:12:437
+7.3 @ mediaelement-and-player.min.js?ver=4.2.17:12
+d @ mediaelement-and-player.min.js?ver=4.2.17:12
+(anonymous) @ mediaelement-and-player.min.js?ver=4.2.17:12
+6.2 @ mediaelement-and-player.min.js?ver=4.2.17:12
+d @ mediaelement-and-player.min.js?ver=4.2.17:12
+r @ mediaelement-and-player.min.js?ver=4.2.17:12
+(anonymous) @ mediaelement-and-player.min.js?ver=4.2.17:12Understand this error
+mediaelement-migrate.min.js?ver=6.8.1:1 Uncaught ReferenceError: mejs is not defined
+    at mediaelement-migrate.min.js?ver=6.8.1:1:14
+    at mediaelement-migrate.min.js?ver=6.8.1:1:1174
+(anonymous) @ mediaelement-migrate.min.js?ver=6.8.1:1
+(anonymous) @ mediaelement-migrate.min.js?ver=6.8.1:1Understand this error
+brandon-custom-scripts.js:22 [BRANDON CUSTOM] Initializing Brandon Components (v2.6.8.0)
+brandon-custom-scripts.js:22 [BRANDON CUSTOM] GSAP and CustomEases ('circleEase', 'rebrandEase') loaded.
+brandon-custom-scripts.js:22 [BRANDON CUSTOM] Initializing Button Handlers.
+brandon-custom-scripts.js:22 [BRANDON CUSTOM] GSAP and CustomEases ('circleEase', 'rebrandEase') loaded.
+brandon-custom-scripts.js:22 [BRANDON CUSTOM] P5: Injecting background containers and initializing sketches.
+favicon.ico:1 
+        */
+
+/*inspect of page*/
+
+<body class="wp-singular page-template-default page page-id-631 logged-in admin-bar wp-theme-semplice7 wp-child-theme-semplice7-child is-frontend dynamic-mode semplice-cursor gallery-cursor customize-support" bgcolor="#0E0E10" data-post-type="page" data-post-id="631" style="height: 969px;" data-breakpoint-js="md">
+    <main id="content-holder" data-active-post="631">	
+        <div id="content-631" class="content-container active-content">
+            <header class="semplice-header nav_sl7calz8k" data-content-position="before"><smp-nav-section id="navbar-top" class="smp-navbar headroom headroom--top headroom--bottom" data-navbar="top" data-nav-id="nav_sl7calz8k" data-navbar-width="fluid" data-navbar-mode="sticky" data-use-headroom="enabled" data-cover-transparent="enabled" data-reveal-transition="{&quot;transition&quot;:&quot;slide&quot;,&quot;easing&quot;:&quot;Expo.easeOut&quot;,&quot;duration&quot;:0.40000000000000002220446049250313080847263336181640625,&quot;delay&quot;:0,&quot;offset&quot;:{&quot;xl&quot;:0,&quot;xs&quot;:0,&quot;sm&quot;:0}}" style=""><smp-container><smp-nav-row id="row-navbar-top" class=""><smp-nav-column id="column_s6qk07ok6"><smp-nav-content id="content_1kaut6fh8" data-module="code"><div class="smp-nav-code is-content"><a href="http://www.brandonleach.co" class="brandon-logo-reveal-link" style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+<span class="brandon-logo-static">B</span>
+<span class="brandon-logo-reveal-mask">
+<span class="brandon-logo-reveal-text top">.LEACH</span>
+<span class="brandon-logo-reveal-text bottom">RANDON LEACH</span>
+<span class="brandon-logo-reveal-width-calibrator">RANDON LEACH</span>
+</span>
+</a></div></smp-nav-content></smp-nav-column><smp-nav-column id="column_emmth67zv"><smp-nav-content id="content_awilpuroo" data-module="menu" data-menu-type="hamburger" data-menu-type-bp="{&quot;xl&quot;:&quot;hamburger&quot;,&quot;lg&quot;:&quot;hamburger&quot;,&quot;md&quot;:&quot;hamburger&quot;,&quot;sm&quot;:&quot;hamburger&quot;,&quot;xs&quot;:&quot;hamburger&quot;}" data-menu-direction="horizontal" data-text-align="left" data-dropdown-mode="mouseover" data-nested-mode="toggle" data-dropdown-align="center" data-menu-width="fit-content" data-distributed="no" data-font="regular" data-hover-effect="none" data-nested-spacing="{&quot;xl&quot;:{&quot;top&quot;:&quot;0.44445rem&quot;,&quot;bottom&quot;:&quot;0.44445rem&quot;,&quot;ver_spacing&quot;:&quot;0rem&quot;,&quot;hor_spacing&quot;:&quot;0.88889rem&quot;},&quot;lg&quot;:[],&quot;md&quot;:[],&quot;sm&quot;:[],&quot;xs&quot;:[]}" data-nav-display-xl="none" data-nav-display-lg="none" data-nav-display-md="none" data-nav-display-sm="none" data-nav-display-xs="none">
+    <div class="text">
+        
+    <nav>
+        <ul><li class="menu-item menu-item-type-post_type menu-item-object-project"><a href="https://brandonleach.co/work/coorsbanquet"><span>Coors Banquet</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.semplice.com"><span>Lumea</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.semplice.com"><span>Miller Lite</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.semplice.com"><span>OneBlade</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.semplice.com"><span>Celestar Solar</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.semplice.com"><span>Philips 1000</span></a></li>
+</ul>
+    </nav>
+
+    </div>
+    <div class="hamburger"><a class="open-menu menu-icon"><span></span></a></div>
+</smp-nav-content></smp-nav-column><smp-nav-column id="column_34u9ici5p"><smp-nav-content id="content_223szg5nu" data-module="code" data-nav-display-sm="none" data-nav-display-xs="none"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-work-menu-trigger" style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">WORK</span>
+<span class="brandon-button-reveal-text bottom">WORK</span>
+<span class="brandon-button-reveal-width-calibrator">WORK</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_8q3khbz3e" data-module="code" data-nav-display-sm="none" data-nav-display-xs="none"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal" href="http://www.brandonleach.co/#about-section" style="font-size: 1rem; color: #0E0E10; font-family: 'Soehne-mono-buch', sans-serif; letter-spacing: .05rem;">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">ABOUT</span>
+<span class="brandon-button-reveal-text bottom">ABOUT</span>
+<span class="brandon-button-reveal-width-calibrator">ABOUT</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_fq26zgnn3" data-module="code" data-nav-display-xl="none" data-nav-display-lg="none" data-nav-display-md="none"><div class="smp-nav-code is-content"><!-- To use this, ensure 'brandon-dots-dark-theme' class is NOT on the trigger div -->
+<div class="brandon-dots-grid-trigger brandon-dots-dark-theme brandon-work-menu-trigger" id="brandonDotsGridMenu" aria-label="Open Menu" role="button" tabindex="0" data-brandon-dots-initialized="true">
+<div class="brandon-dots-grid">
+
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(-8px, -8px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(0px, -8px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(8px, -8px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(-8px, 0px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(0px, 0px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(8px, 0px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(-8px, 8px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(0px, 8px);"></div>
+<div class="brandon-dot" style="translate: none; rotate: none; scale: none; transform-origin: 50% 50%; transform: translate(8px, 8px);"></div></div>
+</div></div></smp-nav-content></smp-nav-column></smp-nav-row></smp-container></smp-nav-section><smp-nav-section id="navbar-bottom" class="smp-navbar" data-navbar="bottom" data-nav-id="nav_sl7calz8k" data-navbar-width="fluid" data-navbar-mode="sticky" data-reveal-transition="{&quot;transition&quot;:&quot;slide&quot;,&quot;easing&quot;:&quot;Expo.easeOut&quot;,&quot;duration&quot;:0.40000000000000002220446049250313080847263336181640625,&quot;delay&quot;:0,&quot;offset&quot;:{&quot;xl&quot;:0}}" style=""><smp-container><smp-nav-row id="row-navbar-bottom" class=" navbar-dropzone"></smp-nav-row></smp-container></smp-nav-section><smp-nav-section id="navbar-overlay" class="smp-overlay" data-navbar="overlay" data-nav-id="nav_sl7calz8k" data-navbar-width="fluid" data-navbar-mode="sticky" data-overlay-height="full" data-navbar-halign="left" data-navbar-valign="center" data-reveal-type="grow" data-reveal-transition="{&quot;transition&quot;:&quot;grow&quot;,&quot;easing&quot;:&quot;Expo.easeOut&quot;,&quot;duration&quot;:0.6999999999999999555910790149937383830547332763671875,&quot;delay&quot;:0,&quot;offset&quot;:{&quot;xl&quot;:0,&quot;lg&quot;:0},&quot;dimdown&quot;:&quot;#000000&quot;,&quot;dimdown_opacity&quot;:&quot;.85&quot;,&quot;start_pos&quot;:&quot;90&quot;,&quot;start_opacity&quot;:1,&quot;grow_attr&quot;:&quot;height&quot;,&quot;push_dir&quot;:&quot;right&quot;}"><div class="close-overlay"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L7 7M7 1L1 7" stroke="white" stroke-opacity="1" stroke-width="1.2" stroke-linecap="round"></path>
+</svg>
+</div><smp-container><smp-nav-row id="row-navbar-overlay" class=""><smp-nav-column id="column_e2wfhcvjh" data-nav-display-xs="none"><smp-nav-content id="content_zl5vche8n" data-module="spacer">
+    <div class="spacer-container">
+        <div class="is-content">
+            <div class="spacer"></div>
+        </div>
+    </div>
+</smp-nav-content></smp-nav-column><smp-nav-column id="column_7mtdlu8ih"><smp-nav-content id="content_7v1bkvsly" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/coorsbanquet/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">COORS BANQUET</span>
+<span class="brandon-button-reveal-text bottom">COORS BANQUET</span>
+<span class="brandon-button-reveal-width-calibrator">COORS BANQUET</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_ykb2jmfnn" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/lumea/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">LUMEA IPL</span>
+<span class="brandon-button-reveal-text bottom">LUMEA IPL</span>
+<span class="brandon-button-reveal-width-calibrator">LUMEA IPL</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_cqtej0aj7" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/millerlite/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">MILLER LITE</span>
+<span class="brandon-button-reveal-text bottom">MILLER LITE</span>
+<span class="brandon-button-reveal-width-calibrator">MILLER LITE</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_k0vl82unf" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/oneblade/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">ONEBLADE</span>
+<span class="brandon-button-reveal-text bottom">ONEBLADE</span>
+<span class="brandon-button-reveal-width-calibrator">ONEBLADE</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_34ac4t6ao" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/underdevelopment/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">CELESTAR</span>
+<span class="brandon-button-reveal-text bottom">CELESTAR</span>
+<span class="brandon-button-reveal-width-calibrator">CELESTAR</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content><smp-nav-content id="content_jdboiguvf" data-module="code"><div class="smp-nav-code is-content"><a class="brandon-animated-button-reveal brandon-arrow-diag-up" href="/work/underdevelopment/" style="font-size: 2.166125rem; color: var(--brandon-dark-text-color); font-family: var(--brandon-font-family); letter-spacing: var(--brandon-letter-spacing-tight);">
+<span class="brandon-button-reveal-mask">
+<span class="brandon-button-reveal-text top">PHILIPS 1000</span>
+<span class="brandon-button-reveal-text bottom">PHILIPS 1000</span>
+<span class="brandon-button-reveal-width-calibrator">PHILIPS 1000</span>
+</span>
+<span class="brandon-arrow-mask">
+<span class="brandon-arrow brandon-arrow-one">↗</span>
+<span class="brandon-arrow brandon-arrow-two">↗</span>
+</span>
+</a></div></smp-nav-content></smp-nav-column></smp-nav-row></smp-container></smp-nav-section><div class="overlay-dim"></div></header>
+            
+            <div class="transition-wrap">
+                <div class="sections">
+                    
+    <smp-section id="section_w5edyrxyr" class="brandon-load-wave" data-column-mode-sm="single" data-column-mode-xs="single" data-layout="fluid" data-gutter="no" data-justify="center" data-height="fullscreen" data-valign="center" data-force-fullscreen="true">
+        
+        <smp-container>
+            
+<smp-row id="row_qztpykou9">
+    <smp-column id="column_1ge5kl41i" data-xl-width="5" data-md-width="7" data-lg-width="6">
+        
+        
+        <smp-content-wrapper>
+            
+<smp-content id="content_4r9y8euck" data-module="image"><div class="smp-image" data-align="center" data-width="grid-width"><div class="is-content"><img class="" src="https://brandonleach.co/wp-content/uploads/2025/06/Artboard-1.webp" width="702" height="702" alt="Artboard 1" title="Artboard 1" caption="" data-scaling="no"></div></div></smp-content></smp-content-wrapper></smp-column></smp-row></smp-container></smp-section>
+                </div>
+            </div>
+        </div>
+    </main>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="pswp__bg"></div>
+<div class="pswp__scroll-wrap">
+<div class="pswp__container">
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div> 
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+    </div>
+</div>
+</div>
+</div>
+    <div class="back-to-top" data-arrow-align="right">
+        <a class="click-handler" data-handler="run" data-action-type="helper" data-setting-type="animate" data-action="scrollToTop"><svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">
+<g id="Ebene_3">
+</g>
+<g>
+<polygon points="43.886,16.221 42.697,17.687 26.5,4.731 10.303,17.688 9.114,16.221 26.5,2.312 	"></polygon>
+</g>
+</svg>
+</a>
+    </div>
+
+            <div id="semplice-cursor" style="transform: translate3d(804px, 102px, 0px);">
+                <div class="semplice-cursor-inner">
+                    <span class="cursor-text cursor-view">View</span>
+                    <span class="cursor-icon cursor-top-arrow"><svg viewBox="0 0 100 100"><path d="M54.393,96.6V14.5L80.7,40.88a4.186,4.186,0,0,0,5.912-5.925L53.172,1.424a4.187,4.187,0,0,0-5.917-.005l-0.005.005L13.8,34.952a4.186,4.186,0,0,0,5.912,5.925L46.029,14.5V96.6A4.182,4.182,0,0,0,54.393,96.6Z"></path></svg>
+</span>
+                    <span class="cursor-icon cursor-bottom-arrow"><svg viewBox="0 0 100 100"><path d="M54.393,3.4V85.5L80.7,59.12a4.186,4.186,0,0,1,5.912,5.925L53.172,98.576a4.188,4.188,0,0,1-5.917.005l-0.005-.005L13.8,65.048a4.186,4.186,0,0,1,5.912-5.925L46.029,85.5V3.4A4.182,4.182,0,0,1,54.393,3.4Z"></path></svg>
+</span>
+                    <span class="cursor-icon cursor-right-arrow"><svg viewBox="0 0 100 100"><path d="M95.849,46.323H14.1L40.364,20.15a4.166,4.166,0,0,0-5.9-5.881L1.076,47.537a4.162,4.162,0,0,0,0,5.891L34.462,86.7a4.166,4.166,0,0,0,5.9-5.881L14.1,54.642H95.849A4.159,4.159,0,1,0,95.849,46.323Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></span>
+                    <span class="cursor-icon cursor-left-arrow"><svg viewBox="0 0 100 100"><path d="M95.849,46.323H14.1L40.364,20.15a4.166,4.166,0,0,0-5.9-5.881L1.076,47.537a4.162,4.162,0,0,0,0,5.891L34.462,86.7a4.166,4.166,0,0,0,5.9-5.881L14.1,54.642H95.849A4.159,4.159,0,1,0,95.849,46.323Z" class="arrow"></path></svg></span>
+                    <span class="cursor-icon cursor-zoom-in"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 99.98"><g id="Interface-Essential_Zoom_zoom-in" data-name="Interface-Essential / Zoom / zoom-in"><g id="Group_344" data-name="Group 344"><g id="zoom-in"><g id="Shape_1570" data-name="Shape 1570"><path d="M40.86,81.78A40.89,40.89,0,0,1,40.9,0h0A40.93,40.93,0,0,1,81.78,40.87h0A41,41,0,0,1,40.86,81.78Zm0-75.53A34.63,34.63,0,1,0,75.53,40.87h0A34.67,34.67,0,0,0,40.9,6.25Z"></path></g><g id="Shape_1571" data-name="Shape 1571"><path d="M59.38,43.74H21.89a3.13,3.13,0,0,1,0-6.25H59.38a3.13,3.13,0,1,1,0,6.25Z"></path></g><g id="Shape_1572" data-name="Shape 1572"><path d="M40.64,62.49a3.13,3.13,0,0,1-3.13-3.13V21.87a3.13,3.13,0,0,1,6.25,0V59.36A3.13,3.13,0,0,1,40.64,62.49Z"></path></g><g id="Shape_1573" data-name="Shape 1573"><path d="M96.88,100a3.12,3.12,0,0,1-2.21-.92L65.39,69.78a3.12,3.12,0,1,1,4.41-4.42L99.08,94.64a3.13,3.13,0,0,1-2.2,5.34Z"></path></g></g></g></g></svg></span>
+                    <span class="cursor-icon cursor-ba"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g id="Interface-Essential_Resize_expand-vertical-2" data-name="Interface-Essential / Resize / expand-vertical-2"><g id="Group_769" data-name="Group 769"><g id="expand-vertical-2"><g id="Shape_3208" data-name="Shape 3208"><path d="M100,50a3.13,3.13,0,0,1-3.13,3.13H62.5a3.13,3.13,0,0,1,0-6.25H96.88A3.12,3.12,0,0,1,100,50Z" transform="translate(0)"></path></g><g id="Shape_3209" data-name="Shape 3209"><path d="M40.63,50a3.13,3.13,0,0,1-3.13,3.12H3.12a3.13,3.13,0,0,1,0-6.25H37.5A3.13,3.13,0,0,1,40.63,50Z" transform="translate(0)"></path></g><g id="Shape_3210" data-name="Shape 3210"><path d="M100,50a3.12,3.12,0,0,1-.92,2.21L83.46,67.83A3.12,3.12,0,0,1,79,63.42L92.46,50,79,36.58a3.12,3.12,0,0,1,4.42-4.41L99.08,47.79A3.12,3.12,0,0,1,100,50Z" transform="translate(0)"></path></g><g id="Shape_3211" data-name="Shape 3211"><path d="M21.88,34.37A3.1,3.1,0,0,1,21,36.58L7.54,50,21,63.42a3.12,3.12,0,0,1-4.42,4.41L.92,52.21a3.11,3.11,0,0,1,0-4.42L16.54,32.17a3.13,3.13,0,0,1,5.34,2.2Z" transform="translate(0)"></path></g><g id="Shape_3212" data-name="Shape 3212"><path d="M53.13,3.13V96.88a3.13,3.13,0,1,1-6.25,0V3.12a3.13,3.13,0,0,1,6.25,0Z" transform="translate(0)"></path></g></g></g></g></svg></span>
+                    <span class="cursor-icon cursor-drag"><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<g id="Interface-Essential_Move_direction-button-arrows" data-name="Interface-Essential / Move / direction-button-arrows">
+<g id="Group_722" data-name="Group 722">
+<g id="direction-button-arrows">
+<g id="Shape_3410" data-name="Shape 3410">
+  <path d="M50,100a2.17,2.17,0,0,1-2.17-2.17V2.17a2.17,2.17,0,0,1,4.34,0V97.83A2.17,2.17,0,0,1,50,100Z" transform="translate(0 0)"></path>
+</g>
+<g id="Shape_3411" data-name="Shape 3411">
+  <path d="M97.83,52.17H2.17a2.17,2.17,0,0,1,0-4.34H97.83a2.17,2.17,0,0,1,0,4.34Z" transform="translate(0 0)"></path>
+</g>
+<g id="Shape_3412" data-name="Shape 3412">
+  <path d="M15.22,65.22a2.14,2.14,0,0,1-1.54-.64l-13-13a2.18,2.18,0,0,1,0-3.08l13-13a2.17,2.17,0,1,1,3.07,3.07L5.25,50l11.5,11.51a2.17,2.17,0,0,1,0,3.07A2.13,2.13,0,0,1,15.22,65.22Z" transform="translate(0 0)"></path>
+</g>
+<g id="Shape_3413" data-name="Shape 3413">
+  <path d="M50,100a2.16,2.16,0,0,1-1.54-.64l-13-13a2.17,2.17,0,1,1,3.07-3.07L50,94.75l11.51-11.5a2.17,2.17,0,1,1,3.07,3.07l-13,13A2.16,2.16,0,0,1,50,100Z" transform="translate(0 0)"></path>
+</g>
+<g id="Shape_3414" data-name="Shape 3414">
+  <path d="M84.78,65.22a2.13,2.13,0,0,1-1.53-.64,2.17,2.17,0,0,1,0-3.07L94.75,50,83.25,38.49a2.17,2.17,0,1,1,3.07-3.07l13,13a2.18,2.18,0,0,1,0,3.08l-13,13A2.14,2.14,0,0,1,84.78,65.22Z" transform="translate(0 0)"></path>
+</g>
+<g id="Shape_3415" data-name="Shape 3415">
+  <path d="M63,17.39a2.13,2.13,0,0,1-1.53-.64L50,5.25,38.49,16.75a2.17,2.17,0,1,1-3.07-3.07l13-13a2.18,2.18,0,0,1,3.08,0l13,13a2.17,2.17,0,0,1,0,3.07A2.14,2.14,0,0,1,63,17.39Z" transform="translate(0 0)"></path>
+</g>
+</g>
+</g>
+</g>
+</svg>
+</span>
+                    <span class="cursor-icon cursor-play"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1778_124)">
+<path d="M17 90.4251V9.57428C17 2.11666 25.1593 -2.46895 31.5295 1.4088L95.6527 40.44C101.66 44.0969 101.795 52.7704 95.9041 56.6123L31.7809 98.4319C25.4226 102.579 17 98.0161 17 90.4251Z"></path>
+</g>
+<defs>
+<clipPath id="clip0_1778_124">
+<rect width="100" height="100" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>
+</span>
+                    <span class="cursor-icon cursor-pause"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" width="20" height="100" rx="6"></rect>
+<rect x="60" width="20" height="100" rx="6"></rect>
+</svg>
+</span>
+                </div>
+            </div>
+        <script type="text/javascript" src="https://brandonleach.co/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-includes/js/admin-bar.min.js?ver=6.8.1" id="admin-bar-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="monsterinsights-vue-frontend-js-extra">
+/* <![CDATA[ */
+var monsterinsights = {"ajax":"https:\/\/brandonleach.co\/wp-admin\/admin-ajax.php","nonce":"a75e0a6e98","network":"","assets":"https:\/\/brandonleach.co\/wp-content\/plugins\/google-analytics-for-wordpress\/lite\/assets\/vue","addons_url":"https:\/\/brandonleach.co\/wp-admin\/admin.php?page=monsterinsights_settings#\/addons","page_id":"631","page_title":"others","plugin_version":"9.6.0","shareasale_id":"0","shareasale_url":"https:\/\/www.shareasale.com\/r.cfm?B=971799&U=0&M=69975&urllink=","is_admin":"","reports_url":"https:\/\/brandonleach.co\/wp-admin\/admin.php?page=monsterinsights_reports","authed":"1","getting_started_url":"https:\/\/brandonleach.co\/wp-admin\/admin.php?page=monsterinsights_settings#\/about\/getting-started","wizard_url":"https:\/\/brandonleach.co\/wp-admin\/index.php?page=monsterinsights-onboarding","roles_manage_options":{"administrator":"Administrator"},"user_roles":["administrator"],"roles_view_reports":""};
+/* ]]> */
+</script>
+<script type="module" src="https://brandonleach.co/wp-content/plugins/google-analytics-for-wordpress/lite/assets/vue/js/frontend.min.js?ver=9.6.0" id="monsterinsights-vue-frontend-js"></script>
+<script type="text/javascript" id="nfd-performance-lazy-loader-js-before">
+/* <![CDATA[ */
+window.nfdPerformance = window.nfdPerformance || {};
+window.nfdPerformance.imageOptimization = window.nfdPerformance.imageOptimization || {};
+window.nfdPerformance.imageOptimization.lazyLoading = {"classes":["nfd-performance-not-lazy","a3-notlazy","disable-lazyload","no-lazy","no-lazyload","skip-lazy"],"attributes":["data-lazy-src","data-crazy-lazy=\"exclude\"","data-no-lazy","data-no-lazy=\"1\""]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://brandonleach.co/wp-content/plugins/bluehost-wordpress-plugin/vendor/newfold-labs/wp-module-performance/build/assets/image-lazy-loader.min.js?ver=1749682128" id="nfd-performance-lazy-loader-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-content/themes/semplice7/assets/js/shared.scripts.js?ver=1.0.1%20-%20Final" id="semplice-shared-scripts-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-content/themes/semplice7/assets/js/frontend.scripts.js?ver=1.0.1%20-%20Final" id="semplice-frontend-scripts-js"></script>
+<script type="text/javascript" id="mediaelement-core-js-before">
+/* <![CDATA[ */
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://brandonleach.co/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17" id="mediaelement-core-js"></script>
+<script type="text/javascript" src="https://brandonleach.co/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.8.1" id="mediaelement-migrate-js"></script>
+<script type="text/javascript" id="mediaelement-js-extra">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="semplice-frontend-js-js-extra">
+/* <![CDATA[ */
+var sempliceWp = {"atts":{"nonce":"a2146a292d","version":"1.0.1 - Final","frontendMode":"dynamic","api":{"default":"https:\/\/brandonleach.co\/wp-json","frontend":"https:\/\/brandonleach.co\/wp-json\/semplice\/v1\/frontend"},"siteName":"Brandon Leach | Creative Portfolio","baseUrl":"https:\/\/brandonleach.co","frontpageId":"519","blogHome":"https:\/\/brandonleach.co","categoryBase":"\/category\/","tagBase":"\/tag\/","ram":{"order":{"cover":[],"section_w5edyrxyr":{"row_qztpykou9":{"columns":{"column_1ge5kl41i":["content_4r9y8euck"]}}}},"images":{"632":{"src":"https:\/\/brandonleach.co\/wp-content\/uploads\/2025\/06\/Artboard-1.webp","width":702,"height":702,"alt":"Artboard 1","title":"Artboard 1","caption":"","sizes":{"medium":"https:\/\/brandonleach.co\/wp-content\/uploads\/2025\/06\/Artboard-1-300x300.webp","medium_large":"https:\/\/brandonleach.co\/wp-content\/uploads\/2025\/06\/Artboard-1.webp"}}},"branding":[],"section_w5edyrxyr":{"options":[],"layout":{"data-column-mode-sm":"single","data-column-mode-xs":"single","data-layout":"fluid","data-gutter":"no","data-justify":"center","data-height":"fullscreen","data-valign":"center","data-force-fullscreen":"true"},"customHeight":{"xl":{"height":"15rem"}},"styles":{"xl":{"background_type":"img","bg_force_autoplay":"enabled","background-color":"#00000000"}},"motions":{"active":[],"start":[],"end":[]},"containerStyles":{"xl":[]},"classes":"brandon-load-wave"},"column_1ge5kl41i":{"width":{"xl":"5","md":"7","lg":"6"},"options":[],"layout":[],"styles":{"xl":[],"md":[],"lg":[]},"motions":{"active":[],"start":[],"end":[]},"wrapperStyles":{"xl":[],"md":[],"lg":[]}},"content_4r9y8euck":{"content":{"xl":"632"},"module":"image","options":{"align":"center","width":"grid-width"},"styles":{"xl":[],"md":[],"lg":[],"sm":{"padding-right":"3.5555555555555554rem","padding-left":"3.5555555555555554rem"},"xs":{"padding-right":"1.7777777777777777rem","padding-left":"1.7777777777777777rem"}},"motions":{"active":[],"start":[],"end":[]}},"unpublished_changes":false,"post_id":631,"posts_filter":{"type":"page","template_type":false,"page_num":1,"meta":false,"url":false}},"isPreview":false,"exclusiveNav":false,"afterIntro":false,"passwordForm":"<div class=\"post-password-form post-password-form-dark\">\r\n\t<div class=\"inner\">\r\n\t\t<form action=\"https:\/\/brandonleach.co\/wp-login.php?action=postpass\" method=\"post\">\r\n\t\t\t<div class=\"password-lock\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"35\" height=\"52\" viewBox=\"0 0 35 52\">\r\n  <path id=\"Form_1\" data-name=\"Form 1\" d=\"M31.3,25.028H27.056a0.755,0.755,0,0,1-.752-0.757V14.654a8.8,8.8,0,1,0-17.608,0v9.616a0.755,0.755,0,0,1-.752.757H3.7a0.755,0.755,0,0,1-.752-0.757V14.654a14.556,14.556,0,1,1,29.111,0v9.616A0.755,0.755,0,0,1,31.3,25.028Zm-3.495-1.514h2.743V14.654a13.051,13.051,0,1,0-26.1,0v8.859H7.192V14.654a10.309,10.309,0,1,1,20.617,0v8.859Zm4.43,28.475H2.761A2.77,2.77,0,0,1,0,49.213V25.28a1.763,1.763,0,0,1,1.755-1.766H33.242A1.763,1.763,0,0,1,35,25.28V49.213A2.77,2.77,0,0,1,32.239,51.988ZM1.758,25.028a0.252,0.252,0,0,0-.251.252V49.213a1.259,1.259,0,0,0,1.254,1.262H32.239a1.259,1.259,0,0,0,1.254-1.262V25.28a0.252,0.252,0,0,0-.251-0.252H1.758ZM20.849,43h-6.7a0.75,0.75,0,0,1-.61-0.314,0.763,0.763,0,0,1-.1-0.682l1.471-4.44a4.1,4.1,0,1,1,5.184,0L21.563,42a0.763,0.763,0,0,1-.1.682A0.75,0.75,0,0,1,20.849,43ZM15.2,41.487H19.8l-1.319-3.979a0.76,0.76,0,0,1,.33-0.891,2.6,2.6,0,1,0-2.633,0,0.76,0.76,0,0,1,.33.891Z\"\/>\r\n<\/svg>\r\n<\/div>\r\n\t\t\t<p class=\"title\">This content is protected.<\/p>\r\n\t\t\t<p class=\"subtitle\">To view, please enter the password.<\/p>\r\n\t\t\t<div class=\"input-fields\">\r\n\t\t\t\t<input name=\"post_password\" class=\"post-password-input\" type=\"password\" size=\"20\" maxlength=\"20\" placeholder=\"Enter password\" \/><a class=\"post-password-submit click-handler\" data-handler=\"run\" data-action-type=\"spa\" data-action=\"postPassword\" data-id=\"631\">Submit<\/a>\t\t\t<\/div>\r\n\t\t<\/form>\r\n\t<\/div>\r\n<\/div>","cursor":{"custom_cursor":"enabled","color":"#70707A","blend_mode":"normal","blur":"0","mouseover_color":"#9E9EA7","mouseover_blend_mode":"multiply","mouseover_size":"24","inner_color":"#0E0E10","font_family":"font_t1encqxr4","letter_spacing":"0.027777777777777776rem","nav_cursor_type":"text","nav_cursor_text":"VIEW","nav_cursor_blendmode":"normal","nav_cursor_color":"#4D96FF","nav_cursor_inner_color":"#FF6978","size":"12","custom_mouseovers":"gallery_prev"},"postIds":{"brandon-leach-designer-art-directo-new-duplicate":"510","work":"650","sample-page":"2","version1":"346","version2":"467","version3":"494","brandon-leach-designer-art-director":"519","others":"631","privacy-policy__trashed":"3","welcome__trashed":"208","home__trashed":"216","brandon-leach-designer-art-director-duplicate__trashed":"655","miller":"21","lumea-ipl":"277","coors-lite":"386","sprout":"8","prezcobix":"30","coors":"37","off":"64","misc":"67","motorola":"204","celestar":"221","motorolla":"248","series-1000":"257","coorsbanquet":"479","oneblade":"584","millerlite":"597","lumea":"609","underdevelopment":"649","lumea-ipl-duplicate__trashed":"601"},"transitions":{"status":"enabled","sr_mobile":"false","preview":"","preset":"staggered","background-color":"#0E0E10","duration_out":0.59999999999999997779553950749686919152736663818359375,"easing_out":"Power1.easeIn","st_mode":"wave","st_easing":"Expo.easeInOut","st_color":"#0E0E10","st_lines":"8","st_duration":0.84999999999999997779553950749686919152736663818359375,"st_delay":0.055000000000000000277555756156289135105907917022705078125,"rt_image":"https:\/\/brandonleach.co\/wp-content\/uploads\/2025\/05\/BLEACH_cHARACTER-01-01.png","rt_color":"#0E0E10","rt_image_align":"0% 0%","rt_image_offset":"950","rt_direction":"leftToRight","rt_image_size":"contain","rt_offset":"400","rt_duration":1.06099999999999994315658113919198513031005859375,"rt_easing":"Power4.easeInOut","st_direction":"hor"},"transitionPresets":{"fade":{"in":{"effect":"fadeIn","position":"normal","visibility":"transition-hidden","easing":"Expo.easeInOut","duration":1},"out":{"effect":"fadeOut","position":"normal","visibility":"transition-hidden","easing":"Expo.easeInOut","duration":1}},"rightToLeft":{"in":{"effect":"moveRightToLeft","position":"right","to":"-100%","visibility":"","easing":"Expo.easeInOut","duration":1},"out":{"effect":"moveRightToLeft","position":"normal","to":"-100%","visibility":"","easing":"Expo.easeInOut","duration":1}},"leftToRight":{"in":{"effect":"moveLeftToRight","position":"left","to":"100%","visibility":"","easing":"Expo.easeInOut","duration":1},"out":{"effect":"moveLeftToRight","position":"normal","to":"100%","visibility":"","easing":"Expo.easeInOut","duration":1}},"topToBottom":{"in":{"effect":"moveTopToBottom","position":"top","to":"100%","visibility":"","easing":"Expo.easeInOut","duration":1},"out":{"effect":"moveTopToBottom","position":"normal","to":"100%","visibility":"","easing":"Expo.easeInOut","duration":1}},"bottomToTop":{"in":{"effect":"moveBottomToTop","position":"bottom","to":"-100%","visibility":"","easing":"Expo.easeInOut","duration":1},"out":{"effect":"moveBottomToTop","position":"normal","to":"-100%","visibility":"","easing":"Expo.easeInOut","duration":1}},"reveal":{"direction":"topToBottom","easing":"Expo.easeInOut","duration":0.9499999999999999555910790149937383830547332763671875,"color":"#ffd300","offset":"450","image":false,"image_size":"auto","image_align":"50% 50%","image_offset":"600"},"staggered":{"mode":"wave","direction":"ver","easing":"Expo.easeOut","lines":4,"duration":0.560000000000000053290705182007513940334320068359375,"color":"#ffd300","delay":0.070000000000000006661338147750939242541790008544921875},"card":{"speed":"1","scale":".85","ease":"expo","radius":0}}}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://brandonleach.co/wp-content/themes/semplice7/assets/js/frontend.js?ver=1.0.1%20-%20Final" id="semplice-frontend-js-js"></script>
+<script type="text/javascript" id="631-motion-js">(function ($) { "use strict"; var intro = false; $(window).scroll();})(jQuery);</script><script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+    var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+        request = true;
+
+    b[c] = b[c].replace( rcs, ' ' );
+    // The customizer requires postMessage and CORS (if the site is cross domain).
+    b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+}());
+
+/* ]]> */
+</script>
+<div id="wpadminbar" class="nojq">
+                    <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+                <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+        <ul role="menu" id="wp-admin-bar-root-default" class="ab-top-menu"><li role="group" id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://brandonleach.co/wp-admin/about.php"><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="About WordPress" id="wp-admin-bar-wp-logo-default" class="ab-submenu"><li role="group" id="wp-admin-bar-about"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/about.php">About WordPress</a></li><li role="group" id="wp-admin-bar-contribute"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/contribute.php">Get Involved</a></li></ul><ul role="menu" aria-label="About WordPress" id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu"><li role="group" id="wp-admin-bar-wporg"><a class="ab-item" role="menuitem" href="https://wordpress.org/">WordPress.org</a></li><li role="group" id="wp-admin-bar-documentation"><a class="ab-item" role="menuitem" href="https://wordpress.org/documentation/">Documentation</a></li><li role="group" id="wp-admin-bar-learn"><a class="ab-item" role="menuitem" href="https://learn.wordpress.org/">Learn WordPress</a></li><li role="group" id="wp-admin-bar-support-forums"><a class="ab-item" role="menuitem" href="https://wordpress.org/support/forums/">Support</a></li><li role="group" id="wp-admin-bar-feedback"><a class="ab-item" role="menuitem" href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li></ul></div></li><li role="group" id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://brandonleach.co/wp-admin/">Brandon Leach | Creative Portfolio</a><div class="ab-sub-wrapper"><ul role="menu" aria-label="Brandon Leach | Creative Portfolio" id="wp-admin-bar-site-name-default" class="ab-submenu"><li role="group" id="wp-admin-bar-dashboard"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/">Dashboard</a></li><li role="group" id="wp-admin-bar-plugins"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/plugins.php">Plugins</a></li></ul><ul role="menu" aria-label="Brandon Leach | Creative Portfolio" id="wp-admin-bar-appearance" class="ab-submenu"><li role="group" id="wp-admin-bar-themes"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/themes.php">Themes</a></li><li role="group" id="wp-admin-bar-menus"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/nav-menus.php">Menus</a></li></ul></div></li><li role="group" id="wp-admin-bar-nfd-site-visibility-badge" class="nfd-site-status-badge-hidden"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/admin.php?page=bluehost&amp;nfd-target=coming-soon-section#/settings">Live</a></li><li role="group" id="wp-admin-bar-customize" class="hide-if-no-customize"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/customize.php?url=https%3A%2F%2Fbrandonleach.co%2Fothers">Customize</a></li><li role="group" id="wp-admin-bar-comments"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/edit-comments.php"><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li role="group" id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://brandonleach.co/wp-admin/post-new.php"><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="New" id="wp-admin-bar-new-content-default" class="ab-submenu"><li role="group" id="wp-admin-bar-new-post"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/post-new.php">Post</a></li><li role="group" id="wp-admin-bar-new-media"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/media-new.php">Media</a></li><li role="group" id="wp-admin-bar-new-page"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/post-new.php?post_type=page">Page</a></li><li role="group" id="wp-admin-bar-new-project"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/post-new.php?post_type=project">Project</a></li><li role="group" id="wp-admin-bar-new-footer"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/post-new.php?post_type=footer">Footer</a></li><li role="group" id="wp-admin-bar-new-user"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/user-new.php">User</a></li></ul></div></li><li role="group" id="wp-admin-bar-edit"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/post.php?post=631&amp;action=edit">Edit Page</a></li><li role="group" id="wp-admin-bar-nfd_purge_menu" class="menupop"><div class="ab-item ab-empty-item" role="menuitem" aria-expanded="false">Caching</div><div class="ab-sub-wrapper"><ul role="menu" id="wp-admin-bar-nfd_purge_menu-default" class="ab-submenu"><li role="group" id="wp-admin-bar-nfd_purge_menu-cache_settings"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/tools.php?page=nfd-performance">Cache Settings</a></li></ul></div></li><li id="wp-admin-bar-monsterinsights_frontend_button" class="monsterinsights-adminbar-menu-item"><div class="ab-item ab-empty-item monsterinsights-toggle"><span class="ab-icon dashicons-before dashicons-chart-bar"></span><span class="monsterinsights-admin-bar-handle-text">Insights</span><!----></div><!----></li></ul><ul role="menu" id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li role="group" id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://brandonleach.co/wp-admin/profile.php">Howdy, <span class="display-name">admin</span><img alt="" src="https://secure.gravatar.com/avatar/?s=26&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/?s=52&amp;d=mm&amp;r=g 2x" class="avatar avatar-26 photo avatar-default" height="26" width="26" loading="lazy" decoding="async"></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="Howdy, admin" id="wp-admin-bar-user-actions" class="ab-submenu"><li role="group" id="wp-admin-bar-user-info"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-admin/profile.php"><img alt="" src="https://secure.gravatar.com/avatar/?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo avatar-default" height="64" width="64" loading="lazy" decoding="async"><span class="display-name">admin</span><span class="display-name edit-profile">Edit Profile</span></a></li><li role="group" id="wp-admin-bar-logout"><a class="ab-item" role="menuitem" href="https://brandonleach.co/wp-login.php?action=logout&amp;_wpnonce=37e0a95df9">Log Out</a></li></ul></div></li><li role="group" id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://brandonleach.co/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150"><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"></form></div></li></ul>			</div>
+</div>
+
+    
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body>
+           GET https://brandonleach.co/favicon.ico 404 (Not Found)Understand this error
