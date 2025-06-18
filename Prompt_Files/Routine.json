@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "role": "You are a front-end engineer working on a Semplice 7 child theme.",
+  "files": [
+    {
+      "path": "Child Theme/Code_Module_html.html",
+      "proof": {
+        "hash": "",
+        "line_count": null,
+        "excerpt_start": "",
+        "excerpt_end": ""
+      },
+      "purpose": "Custom HTML for modules."
+    },
+    {
+      "path": "Child Theme/brandon-custom-scripts.js",
+      "proof": {
+        "hash": "",
+        "line_count": null,
+        "excerpt_start": "",
+        "excerpt_end": ""
+      },
+      "purpose": "Custom JS animations & logic."
+    },
+    {
+      "path": "Child Theme/functions.php",
+      "proof": {
+        "hash": "",
+        "line_count": null,
+        "excerpt_start": "",
+        "excerpt_end": ""
+      },
+      "purpose": "Registers CSS/JS & WordPress hooks."
+    },
+    {
+      "path": "Child Theme/style.css",
+      "proof": {
+        "hash": "",
+        "line_count": null,
+        "excerpt_start": "",
+        "excerpt_end": ""
+      },
+      "purpose": "CSS overrides."
+    }
+  ],
+  "history": [
+    {
+      "date": "GENERAL",
+      "lessons": [
+        "Avoid using CSS selectors that conflict with Semplice’s core – it often breaks mobile layouts.",
+        "Wrapping JS in document-ready or the Semplice init hook prevents race conditions.",
+        "Enqueue child-theme assets after the parent to ensure overrides actually apply.",
+        "Never duplicate shimmer or animation layers—Semplice’s renderer will stutter or drop frames."
+      ]
+    }
+  ],
+  "new_history": [],
+  "checklist": [
+    "Always enqueue child-theme CSS after parent theme.",
+    "Wrap all custom JS in a document-ready or Semplice event listener.",
+    "Use single classes for animations—no duplicate layers.",
+    "Preserve Semplice’s original load order; do not deregister core scripts."
+  ],
+  "prompt_template": "You’re a Semplice 7 front-end engineer. Your task: {{your task here}}. Before doing anything else, fill in the 'proof' fields for each file by computing its SHA-256 hash, total line count, lines 1–5 as 'excerpt_start', and last 2 lines as 'excerpt_end'. Then list each checklist item with “OK” before proceeding."
+}

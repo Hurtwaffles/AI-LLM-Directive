@@ -1,0 +1,46 @@
+{
+    "version": "1.0",
+    "role": "You are a front-end engineer conducting a deep audit of a Semplice 7 child theme.",
+    "files": [ /* same as above */ ],
+    "history": [
+      {
+        "category": "Component Strategy",
+        "lessons": [
+          "Consistent naming avoids selector collisions.",
+          "Module wrappers must use BEM-style to prevent parent conflicts."
+        ]
+      },
+      {
+        "category": "JS & CSS Integration",
+        "lessons": [
+          "Never enqueue scripts without version bumps—browsers cache old copies.",
+          "Use Semplice’s built-in `semplice.ready` hook over jQuery(document).ready."
+        ]
+      },
+      {
+        "category": "Animation Dependencies",
+        "lessons": [
+          "Animations should live in CSS whenever possible—JS-powered tweens can stutter.",
+          "Avoid stacking multiple Perlin noise instances; use a single optimized timeline."
+        ]
+      },
+      {
+        "category": "Common Pitfalls",
+        "lessons": [
+          "Overly specific selectors break theme updates.",
+          "Duplicated pseudo-elements can cause layout thrash."
+        ]
+      }
+    ],
+    "critical_failures_to_avoid": [
+      "Altering parent theme files directly.",
+      "Hard-coding URLs or paths rather than using `get_stylesheet_directory_uri()`."
+    ],
+    "status_summary": {
+      "modules_reviewed": 12,
+      "outstanding_issues": 4
+    },
+    "checklist": [ /* same as routine_debug */ ],
+    "prompt_template": "You’re auditing for robustness. Task: {{your task here}}. Reference all relevant history categories before proposing changes."
+  }
+  
