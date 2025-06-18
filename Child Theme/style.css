@@ -197,21 +197,29 @@
 
 /* ========== BRANDON NAMESPACE: DOTS GRID MENU ICON ========== */
 .brandon-dots-grid {
-	position: relative;
-	width: 24px;
-	height: 24px;
-	display: flex;
-	align-items: center;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
     justify-content: center;
 }
 
 .brandon-dots-grid .brandon-dot {
-	position: absolute;
-	width: 4px;
-	height: 4px;
-	background-color: var(--brandon-dot-color);
-	border-radius: 50%;
-	transform-origin: center center;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: var(--brandon-dot-color);
+        border-radius: 50%;
+        transform-origin: center center;
+}
+
+/* Clickable wrapper for the grid icon */
+.brandon-dots-grid-trigger {
+        display: inline-block;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
 }
 
 
