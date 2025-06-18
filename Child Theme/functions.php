@@ -5,7 +5,9 @@
  * Enqueues all custom and third-party scripts for the front-end only.
  */
 
-error_log('=== FUNCTIONS.PHP LOADED ===');
+if (defined('WP_DEBUG') && WP_DEBUG) {
+    error_log('=== FUNCTIONS.PHP LOADED ===');
+}
 
 // Prevent direct access
 if (!defined('ABSPATH')) {
