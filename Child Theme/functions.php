@@ -40,14 +40,6 @@ function brandon_enqueue_custom_scripts() {
         );
 
         // --- THIRD-PARTY LIBRARIES ---
-        // Core GSAP
-        wp_enqueue_script(
-            'gsap-core',
-            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js',
-            array(),
-            '3.13.0',
-            true
-        );
 
         // P5.js
         wp_enqueue_script(
@@ -62,34 +54,18 @@ function brandon_enqueue_custom_scripts() {
         wp_enqueue_script(
             'brandon-gsap-ce',
             'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js',
-            array('gsap-core'),
+            array(),
             '3.13.0',
             true
         );
 
-        wp_enqueue_script(
-            'brandon-gsap-st',
-            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js',
-            array('gsap-core'),
-            '3.13.0',
-            true
-        );
 
-        // ---- [NEW] GSAP SplitText Plugin ----
-        wp_enqueue_script(
-            'brandon-gsap-splittext',
-            'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js',
-            array('gsap-core'),
-            '3.13.0',
-            true
-        );
-        // ---- [END NEW] ----
 
         // --- CUSTOM JS ---
         wp_enqueue_script(
             'brandon-custom-scripts',
             get_stylesheet_directory_uri() . '/brandon-custom-scripts.js',
-            array('gsap-core', 'brandon-p5', 'brandon-gsap-ce', 'brandon-gsap-st', 'brandon-gsap-splittext'),
+            array('brandon-p5', 'brandon-gsap-ce'),
             '1.0.3',
             true
         );
@@ -99,4 +75,4 @@ function brandon_enqueue_custom_scripts() {
     }
 }
 
-add_action( 'wp_enqueue_scripts', 'brandon_enqueue_custom_scripts' );
+add_action( 'wp_enqueue_scripts', 'brandon_enqueue_custom_scripts', 20 );
